@@ -1,0 +1,18 @@
+- DONE startproject django marketplace
+- DONE create core for base pages in marketplace
+- DONE create app for userprofiles
+- DONE create custom user, test run
+- DONE migrate, create super user
+- create app for products
+	- add category model
+- show the newest products in front page
+- make a product detail view
+- simple search (not important)
+- vendor/store page
+- create login, sign up, log out
+- create "my account page"
+- add product to cart
+- view cart
+- implement payment gateway
+- admin pages for vendors
+- debug & finishing
