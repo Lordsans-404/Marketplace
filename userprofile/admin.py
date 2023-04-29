@@ -7,7 +7,7 @@ from django.contrib.auth.admin import UserAdmin
 class CustomUserAdmin(UserAdmin):
 	model = CustUser
 	add_form = CustomUserForm
-	# Menambah field abstract user di bagian Admin
+	# tell django admin there are new fields in User table
 	fieldsets = *UserAdmin.fieldsets,(
 		('Extra',{'fields':('avatar','about',)})
 	)
