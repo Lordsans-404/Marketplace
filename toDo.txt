@@ -1,8 +1,12 @@
-- DONE startproject django marketplace
+h- DONE startproject django marketplace
 - DONE create core for base pages in marketplace
 - DONE create app for userprofiles
 - DONE create custom user, test run
 - DONE migrate, create super user
+- DONE create base html and setup
+- DONE create nav in base html
+- DONE create simple frontpage for core app
+- create login,register,logout system
 - create app for products
 	- add category model
 - show the newest products in front page
