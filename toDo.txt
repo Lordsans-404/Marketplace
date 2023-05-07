@@ -7,7 +7,9 @@ h- DONE startproject django marketplace
 - DONE create nav in base html
 - DONE create simple frontpage for core app
 - DONE create modal login and sign up
-- create login,register,logout system
+- DONE create login,register system
+- create logout system
+- improve login,register system
 - create app for products
 	- add category model
 - show the newest products in front page

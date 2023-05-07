@@ -1,10 +1,10 @@
 .navbar {
-	z-index: 1!important;
+	z-index: 99!important;
 }
 
 .navbar-brand img{
 	max-height: 40px;
-}	
+}
 
 /* Modal */
 .modal {
@@ -45,14 +45,14 @@
     border: none;
 }
 
-form label{
+.modal form label{
     display: block;
     margin-top: 15px;
     font-size: 20px;
     font-weight: 500;
 }
 
-form input{
+.modal form input{
     display: block;
     height: 50px;
     width: 100%;
@@ -88,12 +88,6 @@ form input{
 button.btn-cancel {
 	border-color: red;
 	color: red;
-}
-
-button.btn-cancel:hover,
-button.btn-cancel:active {
-	color: white;
-	background: red;
 }
 
 

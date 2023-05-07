@@ -10,6 +10,3 @@ from django.contrib import messages
 from django.contrib.auth import logout, login, authenticate
 from django.views import generic
 # Create your views here.
-
-def register(request):
-	

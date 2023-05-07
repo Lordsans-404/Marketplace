@@ -1,5 +1,4 @@
 {% load static %}
-<!-- Code with stein 1 15:36 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,7 @@
 </head>
 <body>
 	<!-- navbar -->
-	<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+	<nav class="navbar navbar-expand-lg bg-body-tertiary shadow fixed-top">
 		<div class="container-fluid d-flex flex-lg-column">
 			<a class="navbar-brand" href="#"><img class="" src="{% static 'base/logo.png' %}" alt=""><span class="align-self-center">E-halo</span></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,24 +38,20 @@
 	<div class="backdrop"></div>
 	<div class="modal modal-login">
 		<h1>Login</h1>
-		<form action="" method="post">
-			<label for="usernameemail">Email</label>
-			<input type="text" name="usernameemail" placeholder="Username / Email" id="usernameemail">
-			<label for="password">Password</label>
-			<input type="password" placeholder="Password" name="password" id="password">
+		<form method="POST">
+			{% csrf_token %}
+			{{loginform}}
+			<!-- <small style="color:red;">{{loginform.error}}jnck</small> -->
 			<button type="submit" value="login" name="submit">Log In</button>
 		</form>
 	</div>
 
 	<div class="modal modal-signup">
 		<h1>Sign Up</h1>
-		<form action="" method="post">
-			<label for="username">Username</label>
-			<input type="text" placeholder="Username" name="username" id="username">
-			<label for="email">Email</label>
-			<input type="email" placeholder="Email" name="email" id="email">
-			<label for="password">Password</label>
-			<input type="password" placeholder="Password" name="password" id="password">
+		<form method="POST">
+			{% csrf_token %}
+			{{signupform}}
+			
 			<button type="submit" value="signup" name="submit">Sign Up</button>
 		</form>
 	</div>
@@ -69,7 +64,15 @@
 	<script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'bootstrap/js/popper.min.js' %}"></script>
-	<script src="{% static 'base/script.js' %}"></script>
+	<script src="{% static 'base/script.js' %}">
+	</script>
+	<script type="text/javascript">
+		setTimeout(function(){
+			if ($('#msg').length > 0) {
+				$('#msg').remove();
+			}
+		}, 30000) 
+	</script>
 	{% block script %}
 	{% endblock script %}
 </body>
